@@ -4,5 +4,5 @@ import { ContextData } from "../context"
 export const PostIt = () => {
   const { text } = useContext(ContextData)
 
-  return <div>{text}</div>
+  return <div className="post_it">{text}</div>
 }

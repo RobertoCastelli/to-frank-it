@@ -16,8 +16,10 @@ export const InputField = () => {
           maxLength={30}
           type="text"
         />
-        <input type="date" value={day} onChange={handleDate} />
-        <button>frank'it!</button>
+        <div className="main_content">
+          <input type="date" value={day} onChange={handleDate} />
+          <button>frank'it!</button>
+        </div>
       </div>
     </div>
   )
