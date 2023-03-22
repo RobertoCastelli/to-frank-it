@@ -1,5 +1,9 @@
 import React from "react"
 
 export const Title = () => {
-  return <header>Frank'it</header>
+  return (
+    <div>
+      <header>Frank'it</header>
+    </div>
+  )
 }

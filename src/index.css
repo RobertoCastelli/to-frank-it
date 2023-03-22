@@ -47,10 +47,16 @@ input {
   height: 50px;
   padding: 1rem;
   outline: none;
-  border: none;
+  border: 1px solid #333;
   color: #333;
   border-radius: 0.5rem;
   background-color: rgb(226, 204, 193, 0.9);
+}
+li:nth-child(odd) {
+  transform: rotate(5deg);
+}
+li:nth-child(even) {
+  transform: rotate(-7deg);
 }
 
 /*  CONTEINER */
@@ -76,16 +82,17 @@ input {
   justify-content: space-between;
 }
 
-.post_it {
+.post_it-container {
   color: #333;
   background: #ffc;
   height: 10em;
+  width: 15em;
   padding: 1em;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-}
 
-.post_it:hover {
-  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-  position: relative;
-  z-index: 5;
+  margin: auto;
+}
+.post_it-content {
+  display: flex;
+  justify-content: space-between;
 }
