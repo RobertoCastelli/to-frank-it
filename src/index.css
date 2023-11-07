@@ -5,7 +5,7 @@ body {
   padding: 0;
   font-family: "Underdog", cursive;
   letter-spacing: 0.1rem;
-  color: #e2ccc1;
+
   background-image: url(./images/skull-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,12 +16,15 @@ body {
   box-sizing: border-box;
 }
 header {
+  color: cadetblue;
   text-align: center;
   font-family: "Creepster", cursive;
   font-size: 50px;
 }
 footer {
   text-align: center;
+  color: white;
+  padding: 0.5rem;
 }
 button {
   font-family: "Underdog", cursive;
@@ -52,12 +55,6 @@ input {
   border-radius: 0.5rem;
   background-color: rgb(226, 204, 193, 0.9);
 }
-li:nth-child(odd) {
-  transform: rotate(5deg);
-}
-li:nth-child(even) {
-  transform: rotate(-7deg);
-}
 
 /*  CONTEINER */
 .container {
@@ -81,18 +78,43 @@ li:nth-child(even) {
   display: flex;
   justify-content: space-between;
 }
+.main_radio {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-.post_it-container {
+/* POST IT */
+.post_it-ul {
+  padding: 0;
+  list-style: none;
+}
+.post_it-li {
   color: #333;
   background: #ffc;
-  height: 10em;
-  width: 15em;
-  padding: 1em;
-  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-
+  height: 10rem;
+  width: 15rem;
+  padding: 1rem;
+  box-shadow: 5px 0px 7px rgba(33, 33, 33, 0.7);
   margin: auto;
 }
+.post_it-li:nth-child(odd) {
+  transform: rotate(5deg);
+}
+.post_it-li:nth-child(even) {
+  transform: rotate(-7deg);
+}
 .post_it-content {
+  display: grid;
+}
+.post_it-header {
   display: flex;
   justify-content: space-between;
+}
+.post_it-text {
+  word-wrap: break-word;
+}
+.post_it-icon {
+  color: brown;
 }

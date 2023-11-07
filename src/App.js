@@ -2,7 +2,7 @@ import { ContextProvider } from "./context"
 import { Title } from "./components/Title"
 import { InputField } from "./components/InputField"
 import { Footer } from "./components/Footer"
-import { PostField } from "./components/PostField"
+import { Posts } from "./components/Posts"
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <div className="content">
           <Title />
           <InputField />
-          <PostField />
+          <Posts />
         </div>
         <Footer />
       </div>
