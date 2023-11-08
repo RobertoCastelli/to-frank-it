@@ -14,7 +14,6 @@ export const InputField = () => {
             type="radio"
             value="rob"
             name="author"
-            checked={true}
             onChange={handleRadio}
           />
           <label>Rob</label>
