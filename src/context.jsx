@@ -42,19 +42,16 @@ export const ContextProvider = (props) => {
     setPosts(posts)
   }, [posts]) */
 
-  // --- UPDATE POSTS
-  useEffect(() => {
-    const getPosts = async () => {
-      const q = query(collection(db, "posts"), orderBy("day", "asc"))
-      const querySnapshot = await getDocs(q)
-      const postArr = []
-      querySnapshot.forEach((doc) => {
-        postArr.push({ ...doc.data(), id: doc.id })
-      })
-      setPosts(postArr)
-    }
-    getPosts()
-  }, [])
+  // --- GET POSTS
+  const getPosts = async () => {
+    const q = query(collection(db, "posts"), orderBy("day", "asc"))
+    const querySnapshot = await getDocs(q)
+    const postArr = []
+    querySnapshot.forEach((doc) => {
+      postArr.push({ ...doc.data(), id: doc.id })
+    })
+    setPosts(postArr)
+  }
 
   // --- ADD POSTS
   const addPost = async (e) => {
@@ -71,6 +68,7 @@ export const ContextProvider = (props) => {
       await addDoc(collection(db, "posts"), postIt)
       setText("")
     }
+    getPosts()
   }
 
   // --- DELETE POST
