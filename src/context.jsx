@@ -38,9 +38,9 @@ export const ContextProvider = (props) => {
   const handleRadio = (e) => setRadio(e.target.value)
 
   // --- SHOW POSTS
-  useEffect(() => {
+  /*   useEffect(() => {
     setPosts(posts)
-  }, [posts])
+  }, [posts]) */
 
   // --- UPDATE POSTS
   useEffect(() => {
@@ -54,7 +54,7 @@ export const ContextProvider = (props) => {
       setPosts(postArr)
     }
     getPosts()
-  }, [posts])
+  }, [])
 
   // --- ADD POSTS
   const addPost = async (e) => {
