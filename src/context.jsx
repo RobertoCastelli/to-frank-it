@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import clickSound from "./sounds/click.wav"
 import deleteSound from "./sounds/delete.wav"
 import { db } from "./firebaseConfig"
