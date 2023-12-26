@@ -2,8 +2,15 @@ import React, { useContext } from "react"
 import { ContextData } from "../context"
 
 export const InputField = () => {
-  const { text, handleChange, handleRadio, day, handleDate, addPost } =
-    useContext(ContextData)
+  const {
+    text,
+    handleChange,
+    handleRadio,
+    day,
+    handleDate,
+    addPost,
+    recallPost,
+  } = useContext(ContextData)
 
   return (
     <div>
@@ -32,9 +39,11 @@ export const InputField = () => {
           maxLength={70}
           type="text"
         />
-        <div className="main_content">
-          <input type="date" value={day} onChange={handleDate} />
+
+        <input type="date" value={day} onChange={handleDate} />
+        <div className="main_buttons">
           <button onClick={addPost}>FRANK'IT!</button>
+          <button onClick={recallPost}>R'CALL</button>
         </div>
       </div>
     </div>

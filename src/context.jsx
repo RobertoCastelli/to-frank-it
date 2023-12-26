@@ -13,9 +13,7 @@ import {
 } from "firebase/firestore"
 
 // TODO: random post-it colour
-// TODO: date order
-// TODO: stroke line on text when done
-// TODO: decision YES - NO
+// TODO: date expire
 
 // --- CONTEXT
 export const ContextData = React.createContext()
@@ -36,11 +34,6 @@ export const ContextProvider = (props) => {
   const handleChange = (e) => setText(e.target.value)
   const handleDate = (e) => setDay(e.target.value)
   const handleRadio = (e) => setRadio(e.target.value)
-
-  // --- SHOW POSTS
-  /*   useEffect(() => {
-    setPosts(posts)
-  }, [posts]) */
 
   // --- GET POSTS
   const getPosts = async () => {
@@ -71,6 +64,9 @@ export const ContextProvider = (props) => {
     getPosts()
   }
 
+  // --- RECALL POSTS
+  const recallPost = () => getPosts()
+
   // --- DELETE POST
   const deletePost = async (e) => {
     deleteAudio.play()
@@ -89,6 +85,7 @@ export const ContextProvider = (props) => {
         handleDate,
         handleRadio,
         addPost,
+        recallPost,
         deletePost,
       }}
     >

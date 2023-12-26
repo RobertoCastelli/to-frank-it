@@ -75,14 +75,18 @@ input {
   gap: 1rem;
 }
 .main_content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
 }
 .main_radio {
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 1rem;
+}
+.main_buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* POST IT */
