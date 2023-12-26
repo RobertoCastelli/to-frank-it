@@ -27,7 +27,7 @@ export const ContextProvider = (props) => {
   const today = new Date().toISOString().substring(0, 10)
   const [text, setText] = useState("")
   const [day, setDay] = useState(today)
-  const [radio, setRadio] = useState("Rob")
+  const [radio, setRadio] = useState("rob")
   const [posts, setPosts] = useState([])
 
   // --- HANDLES

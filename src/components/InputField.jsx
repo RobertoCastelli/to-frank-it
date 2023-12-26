@@ -39,8 +39,9 @@ export const InputField = () => {
           maxLength={70}
           type="text"
         />
-
-        <input type="date" value={day} onChange={handleDate} />
+        <div className="main_date">
+          <input type="date" value={day} onChange={handleDate} />
+        </div>
         <div className="main_buttons">
           <button onClick={addPost}>FRANK'IT!</button>
           <button onClick={recallPost}>R'CALL</button>
